@@ -5,6 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
     <title>QUIZ - Contact</title>
     </head>
     <body>
@@ -38,16 +41,32 @@
     <main>
 
         <div id="arianeSearch">
-        <input id="search" type="search" placeholder="Recherche">
+        <input id="search" type="search" placeholder=" &#128269 Recherche">
         </div>
-        <div id="app">
-            <p>Ce site est a visée pédagogique et son usage est réservé aux membres de l’établissement.<br><br>
-            L’objectif est de favoriser l’apprentissage de façon ludique.<br><br>
-            Les thèmes proposés vous permettront d’enrichir votre culture numérique.<br><br>
-            Nous ajoutons dès que cela est nécessaire des explications et des informations complémentaires aux réponses.<br><br>
-            Avec ce Quiz, vous pouvez apprendre tout en vous amusant.
-            </p>
+        <div class="textecontact">
+        <h1>Nous contacter</h1>
+        <h3>Vous souhaitez contacter l'équipe?</h3>
+        <h3>Vous pouvez remplir le formulaire ci-dessous pour entrer en contact avec notre équipe :</h3>
         </div>
+        <div class="name">
+            <input type="name" class="Nom" placeholder="Nom*" required >
+        </div>
+        <div class="lastname">
+            <input type="prenom" class="Prenom" placeholder="Prenom*" required>
+        </div>
+        <div class="email">
+            <input type="email"  class="mail" placeholder="Email*" required>
+        </div>
+        <div class="objet">
+            <input type="text"  class="message" placeholder="Objet du message*" required>
+        </div>
+        <div class="zone">
+            <input type="button" value="Envoyer">
+            <textarea name="Message" class="zonedetexte" placeholder="Message*"></textarea>
+            
+        </div>
+       
+       
     </main>
 
     <footer>
