@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
-    <title>QUIZ - Accueil</title>
+    <title>QUIZ - Se connecter</title>
   </head>
   <body>
     <header>
@@ -22,16 +22,15 @@
           <a href="index.html"><img class="button" src="logoAccueil.png" alt="Accueil" title="Accueil"></a>
           <a href="aPropos.html"><img class="button" src="logoAPropos.png" alt="A propos" title="A propos"></a>
           <div class="champs">
-            <input id="identifiant" class="champ" type="text" placeholder="Email">
+            <input class="champ" type="text" placeholder="Login">
             <p></p>
-            <input id="motDePasse" class="champ" type="password" placeholder="Mot de passe">
+            <input class="champ" type="text" placeholder="Mot de passe">
             <a class="oubli" href="index.html">Mot de passe oublié ?</a>
           </div>
           <div class="champs">
-       
-          <button class="buttonTxt" onclick="connexion();">Connexion</button>
+          <input class="buttonTxt" type="button" value="Connexion">
           <p>Ou</p>
-          <a href="CrétionCompte.html"><input class="buttonTxt" type="button" value="S'inscrire"></a>
+          <input class="buttonTxt" type="button" value="S'inscrire">
 
         </menu>
 
@@ -44,8 +43,18 @@
       <div id="arianeSearch">
         <input id="search" type="search" placeholder="Recherche">
       </div>
-      <div id="app">
+      <div>
+        <form method="post" action="main.js">
 
+                <label for="Pseudo">Email :</label>
+                <input type="email" name="Email" placeholder="Email" maxlength="30" id="Email" class="champ">
+            <br>
+                <label for="Pseudo">Mot de passe :</label>
+                <input type="password" name="Mot de passe" placeholder="Mot de passe" maxlength="30" id="Mot de passe" class="champ"><br>
+            <br>
+                <input class="buttonTxt" type="button" value="Confirmer">
+        </form>
+        
       </div>
     </main>
 
@@ -62,6 +71,5 @@
 
     </footer>
     <script type="module" src="/main.js"></script>
-    <script src="connexion.js"></script>
   </body>
 </html>

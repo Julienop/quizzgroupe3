@@ -1,7 +1,7 @@
 :root {
   --Color1: #A2D8F0;
   --Color2: #265C74;
-  --Color3: #2E6885;
+  --Color3: #2e6885a7;
   --Color4: #B0D8EC;
 
 }
@@ -32,7 +32,7 @@ menu {
 }
 
 .button {
-  width: 120px;
+  width: 100px;
   height: auto;
   background-color: var(--Color1);
   transition: transform 0.5s;
@@ -122,11 +122,12 @@ header {
   width: 100%;
 }
 
-#app {
+#topo {
   text-align: center;
   color: white;
-  background-color: var(--Color2);
+  background-color: var(--Color3);
   width: 60vw;
+  border-radius: 10px;
 }
 
 main {
@@ -135,4 +136,18 @@ main {
   align-items: center;
   font-size: 1.2em;
   border-radius: 5px;
+}
+
+form {
+  color: white;
+  background-color: var(--Color3);
+  padding: 30px;
+	width: 35vw;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  width: 220px;
+  float: left;
 }
