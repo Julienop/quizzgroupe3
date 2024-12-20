@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 609876689633d730fdd5e5ac9a68344e7eaced7b
 //Démarre ma session
 session_start();
 

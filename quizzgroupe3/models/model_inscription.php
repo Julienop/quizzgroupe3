@@ -56,7 +56,11 @@ function addUser($bdd,$firstname,$lastname,$email,$password){
         //Exécution de la requête
         $req->execute();
 
+<<<<<<< HEAD
         return "Votre compte a été enregistré avec succès !";
+=======
+        return "$firstname $lastname a été enregistré avec succès !";
+>>>>>>> 609876689633d730fdd5e5ac9a68344e7eaced7b
     }catch(EXCEPTION $error){
         return $error->getMessage();
     }
