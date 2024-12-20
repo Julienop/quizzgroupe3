@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
     <title>QUIZ - Accueil</title>
   </head>
@@ -21,17 +21,18 @@
         <menu>
           <a href="index.html"><img class="button" src="logoAccueil.png" alt="Accueil" title="Accueil"></a>
           <a href="aPropos.html"><img class="button" src="logoAPropos.png" alt="A propos" title="A propos"></a>
+          <form method="POST" action="">
           <div class="champs">
-            <input id="identifiant" class="champ" type="text" placeholder="Email">
+            <input class="champ" type="text" name="email" placeholder="Login">
             <p></p>
-            <input id="motDePasse" class="champ" type="password" placeholder="Mot de passe">
-            <a class="oubli" href="index.html">Mot de passe oublié ?</a>
+            <input class="champ" type="password" name="password" placeholder="Mot de passe">
+            <a class="oubli" href="index.php">Mot de passe oublié ?</a>
           </div>
           <div class="champs">
-       
-          <button class="buttonTxt" onclick="connexion();">Connexion</button>
+          <input class="buttonTxt" name="submitCo" type="submit" value="Connexion">
+          </form>
           <p>Ou</p>
-          <a href="CrétionCompte.html"><input class="buttonTxt" type="button" value="S'inscrire"></a>
+          <a href="CrétionCompte.php"><input class="buttonTxt" type="button" value="S'inscrire"></a>
 
         </menu>
 
@@ -42,12 +43,22 @@
     <main>
 
       <div id="arianeSearch">
-        <input id="search" type="search" placeholder="Recherche">
+        <input id="search" type="search" placeholder=" &#128269 Recherche">
       </div>
       <div id="app">
 
       </div>
+      
+      
     </main>
+    <div class="quizhtml">
+      
+      <img src="logojs.png" alt="logohtml"></a>
+      <input type="image" src="boutondemarrer.PNG" alt="Bouton" class="demarrer">
+    </div>
+    
+
+   
 
     <footer>
 
@@ -62,6 +73,5 @@
 
     </footer>
     <script type="module" src="/main.js"></script>
-    <script src="connexion.js"></script>
   </body>
 </html>
