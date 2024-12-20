@@ -1,9 +1,7 @@
 <?php
 class ViewFooter{
     public function render():string{
-        ob_start();
-?>
-        <footer>
+        return '<footer>
 
             <div id="footer">
                 <a href="aPropos.html">
@@ -18,9 +16,8 @@ class ViewFooter{
     <script type="module" src="/main.js"></script>
     <script src="connexion.js"></script>
     </body>
-</html>
-<?php
-        return ob_get_clean();
+</html>';
     }
 }
+
 ?>

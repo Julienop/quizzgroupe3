@@ -24,18 +24,9 @@ class ViewAccueil{
         return $this;
     }
 
-    public function cardUser($user):?string{
-        ob_start();
-?>
-        <li><?php echo "{$user['firstname_user']} {$user['name_user']} : {$user['email_user']}"?></li>
-<?php
-        return ob_get_clean();
-    }
-
     public function render():string{
-        ob_start();
-?>
-        <main>
+        return 
+        '<main>
 
             <div id="arianeSearch">
             <input id="search" type="search" placeholder=" &#128269 Recherche">
@@ -63,9 +54,8 @@ class ViewAccueil{
             </div>
             </div>
 
-    </main>
-<?php
-        return ob_get_clean();
+        </main>';
+
     }
 }
 ?>

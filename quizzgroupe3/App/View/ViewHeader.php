@@ -16,9 +16,7 @@ class ViewHeader{
     }
 
     public function render():string{
-        ob_start();
-?>
-        <html lang="en">
+        return '<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -50,15 +48,13 @@ class ViewHeader{
 
                 <button class="buttonTxt" onclick="connexion();">Connexion</button>
                 <p>Ou</p>
-                <a href="CrétionCompte.html"><input class="buttonTxt" type="button" value="S'inscrire"></a>
+                <a href="CrétionCompte.html"><input class="buttonTxt" type="button" value="Inscription"></a>
 
             </menu>
 
             </div>
 
-        </header>
-<?php
-        return ob_get_clean();
+        </header>';
     }
 }
 ?>

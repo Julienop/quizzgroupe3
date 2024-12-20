@@ -49,4 +49,15 @@ class Tools
     {
         return file_get_contents('php://input');
     }
+
+    public static function renderView($view)
+    {
+        // Extraire les données pour les rendre disponibles dans la vue
+        // extract();
+
+        // Inclure les fichiers de mise en page
+        include 'ViewHeader.php';
+        include $view; // Vue principale
+        include 'ViewFooter.php';
+    }
 }

@@ -10,31 +10,31 @@ require_once './vendor/autoload.php';
 session_start();
 
 //Analyse de l'URL avec parse_url() et retourne ses composants
-$url = parse_url($_SERVER['REQUEST_URI']);
-//test si l'url posséde une route sinon on renvoi à la racine
+$url = parse_url($_SERVER['REQUEST_URL']);
+// //test si l'url posséde une route sinon on renvoi à la racine
 $path = $url['path'] ??  '/';
 
-//Récupération du token JWT
+// //Récupération du token JWT
 $bearer = isset($_SERVER['HTTP_AUTHORIZATION']) ? preg_replace(
     '/Bearer\s+/',
     '',
     $_SERVER['HTTP_AUTHORIZATION']
 ) : null;
 
-//importer les classes
+// //importer les classes
 use App\Router\Router;
 use App\Router\Route;
 use App\Controller\UserController;
 use App\Controller\HomeController;
 
-//instance des Controllers
+// //instance des Controllers
 $userController = new UserController();
 $homeController = new HomeController();
 
-//Instance du Router
+// //Instance du Router
 $router = new Router(substr($path, strlen(BASE_URL)), $bearer); 
 
-//Ajout des routes
+// //Ajout des routes
 $router->addRoute(new Route('', 'GET', 'Home', 'home'));
 $router->addRoute(new Route('user', 'GET', 'User', 'showAll'));
 $router->addRoute(new Route('user', 'POST', 'User', 'save'));
